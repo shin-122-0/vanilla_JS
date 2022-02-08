@@ -1,25 +1,28 @@
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+const playerName = "shinyoung";
+const playerPoints = 121212;
+const playerHair = "long";
+const playerWallet = false;
 
-const daysOfWeek = [mon , tue , wed, thu , fri , sat];
+// comment로 설명하기?
+// player[0] == name
+// player[1] == points 
+const playertest = ["shinyoung", 1212, false, "long"];
 
-console.log(daysOfWeek);
+// use Object
+const player = {
+    name: "shinyoung",
+    points: 120,
+    hair: "long",
+    Wallet: false,
+};
 
-const nonsense = [1, 2, "hello", false, null, true, undefined, "shinyoung"];
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
 
-console.log(daysOfWeek, nonsense);
+player.Wallet = true;
+player.lastName = "Han";
+console.log(player);
 
-// Get Item from Array
-console.log(daysOfWeek[5]);
-
-// Add one more day to the array
-daysOfWeek.push(sun);
-console.log(daysOfWeek);
-
-const toBuy = ["potato", "tomato", "pizza"];
-toBuy.push("kimbab");
+player.points = player.points + 15;
+console.log(player.points);
