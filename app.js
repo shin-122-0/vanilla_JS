@@ -1,23 +1,25 @@
-function plus(fisrtNumber, secondNumber){
-    console.log(fisrtNumber + secondNumber);
-}
-
-function divide(a, b){
-    console.log(a/b);
-}
-
-
-plus(8, 60);
-divide(4, 20);
-
-// function sayHello(){console.log("hello!");}는 리스트 안에서 아래와 같이 변형됨.
-
-const player = {
-    name: "shinyoung",
-    sayHello: function(otherPersonsName) {
-        console.log("hello! " + otherPersonsName + " Nice to meet you!");
+const calculator = {
+    plus: function(a, b, c, d) {
+        return a + b + c + d ;
+    },
+    times: function(a, b) {
+        return a * b;
+    },
+    minus: function(a, b) {
+        return a - b;
+    },
+    divide: function(a, b) {
+        return a / b;
+    },
+    power: function(a, b) {
+        return a ** b;
     },
 };
 
-console.log(player.name);
-player.sayHello("Han");
+const plusResult = calculator.plus(2, 3, 1, 4);
+const minusResult = calculator.minus(8, plusResult);
+const timesResult = calculator.times(10, minusResult);
+const divideResult = calculator.divide(timesResult, plusResult);
+const powerResult = calculator.power(divideResult, minusResult);
+
+console.log(plusResult);
