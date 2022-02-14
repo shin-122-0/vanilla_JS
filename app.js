@@ -1,9 +1,18 @@
-const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
 
-function handleTitleClick(){
-    //const clickedClass = "clicked"; Toggle로 한번만 사용하기에 정의도 필요없음.
-    h1.classList.toggle("clicked");
+function onLoginSubmit(event) {
+    ///prventDefault는 기본 동작을 멈춤. ex. 엔터로 제출, 버튼으로 제출 등
+    event.preventDefault();
+    // const username = loginInput.value;
+    console.log(event);
+    // if(username === "") {
+    //     alert("Please write your name.");
+    // }
+    // else if(username.length > 15) {
+    //     alert("Your name is too long.")
+    // }
 }
 
-h1.onclick = handleTitleClick;
-//h1.addEventListener("click", handleTitleClick);
+loginForm.addEventListener("submit", onLoginSubmit);
